@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mango</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_note">NoteActivity</string>
+    <string name="title">Title</string>
+    <string name="note">Note</string>
+</resources>

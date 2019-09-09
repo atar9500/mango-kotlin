@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/note_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/grey_400"
+    app:cardCornerRadius="@dimen/note_card_radius"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/note_padding">
+
+        <TextView
+            android:id="@+id/note_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/note_title_size"
+            android:textColor="@color/grey_900"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="This is a note that I wrote a long time ago, I really dig this note so I'll just continue typing until I'll die basically"/>
+
+        <TextView
+            android:id="@+id/note_snippet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/note_snippet_size"
+            android:textColor="@color/grey_800"
+            android:layout_marginTop="@dimen/note_snippet_title_margin"
+            android:maxLines="7"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/note_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="This is a note that I wrote a long time ago, I really don't know what to type so I'm just testing my typing skills, writing is really nice and I recommend for y'all to do the same things. bla bla bla I really love chocolate tho what about you? From time to time I feel sad and lonely but I learn to embrace it and accept it, things will be ok I reckon"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

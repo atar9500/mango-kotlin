@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="note_list_fragment_fab_margin">16dp</dimen>
+    <dimen name="note_padding">8dp</dimen>
+    <dimen name="note_title_size">20sp</dimen>
+    <dimen name="note_snippet_size">17sp</dimen>
+    <dimen name="note_snippet_title_margin">8dp</dimen>
+    <dimen name="note_card_radius">6dp</dimen>
+    <dimen name="note_fragment_padding">16dp</dimen>
+    <dimen name="note_fragment_title_size">28sp</dimen>
+    <dimen name="note_fragment_content_size">22sp</dimen>
+    <dimen name="note_fragment_content_title_margin">16dp</dimen>
+    <dimen name="grid_spacing">8dp</dimen>
+</resources>
