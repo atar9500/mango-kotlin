@@ -6,13 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.atar.mango.R
 import com.atar.mango.db.Note
+import com.atar.mango.db.NoteColor
 
 class NotesAdapter internal constructor(
     context: Context,
-    private val mNoteClickListener: NoteClickListener
+    noteClickListener: NoteClickListener
 ) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     /**
@@ -20,6 +22,8 @@ class NotesAdapter internal constructor(
      */
     private val mInflater: LayoutInflater = LayoutInflater.from(context)
     private var mNotes = mutableListOf<Note>()
+    private val mNoteClickListener: NoteClickListener = noteClickListener
+    private val mContext: Context = context
 
     /**
      * Inner Classes
@@ -55,6 +59,8 @@ class NotesAdapter internal constructor(
         holder.mNote = current
         holder.mTitleView.text = current.title
         holder.mSnippetView.text = current.content
+        val formattedColor = ContextCompat.getColor(mContext, Note.getNoteColor(current).value)
+        holder.mCardView.setCardBackgroundColor(formattedColor)
     }
 
     override fun getItemCount() = mNotes.size

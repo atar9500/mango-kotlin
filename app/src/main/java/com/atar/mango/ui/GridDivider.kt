@@ -4,12 +4,13 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class GridDivider(gridSpacingPx: Int, gridSize: Int) : RecyclerView.ItemDecoration() {
+class GridDivider(gridSpacingPx: Int, gridSize: Int = 1, horizontal: Boolean = false) : RecyclerView.ItemDecoration() {
     /**
      * Data
      */
     private var mSizeGridSpacingPx: Int = gridSpacingPx
     private var mGridSize: Int = gridSize
+    private var mHorizontal: Boolean = horizontal
     private var mNeedLeftSpacing = false
 
     /**
@@ -51,7 +52,7 @@ class GridDivider(gridSpacingPx: Int, gridSize: Int) : RecyclerView.ItemDecorati
             outRect.left = mSizeGridSpacingPx / 2
             outRect.right = mSizeGridSpacingPx / 2
         }
-        if (itemPosition >= state.itemCount - 2) {
+        if (itemPosition >= state.itemCount - mGridSize || mHorizontal) {
             outRect.bottom = mSizeGridSpacingPx
         } else {
             outRect.bottom = 0

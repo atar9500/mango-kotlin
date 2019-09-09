@@ -76,7 +76,7 @@ class NoteListFragment : Fragment() {
         mViewModel.getAllNotes().observe(this, mNotesObserver)
 
         val gridSpacing = resources.getDimensionPixelOffset(com.atar.mango.R.dimen.grid_spacing)
-        fnol_list.addItemDecoration(GridDivider(gridSpacing, LIST_ROWS))
+        fnol_list.addItemDecoration(GridDivider(gridSpacing, LIST_ROWS, false))
         mNotesAdapter = NotesAdapter(context!!, mNoteClickListener)
         fnol_list.adapter = mNotesAdapter
         fnol_list.layoutManager = StaggeredGridLayoutManager(LIST_ROWS, LIST_ORIENTATION)

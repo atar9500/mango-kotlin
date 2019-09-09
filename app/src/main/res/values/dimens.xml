@@ -11,4 +11,5 @@
     <dimen name="note_fragment_content_size">22sp</dimen>
     <dimen name="note_fragment_content_title_margin">16dp</dimen>
     <dimen name="grid_spacing">8dp</dimen>
+    <dimen name="color_pick_size">48dp</dimen>
 </resources>
